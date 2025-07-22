@@ -36,7 +36,10 @@ export class ListaContatosComponent implements OnInit{
   constructor(private contatoService: ContatoService) {}
 
   ngOnInit() {
-    this.contatos = this.contatoService.obterContatos();
+    // Utilizamos o método subscripe para fazer a ligação do observe e observable, no caso o lista-contatos.component é o observador
+    this.contatoService.obterContatos().subscribe(listaContatos => {
+      this.contatos = listaContatos;
+    });
   }
 
   // Remove os acentos de uma string

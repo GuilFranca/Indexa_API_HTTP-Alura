@@ -17,5 +17,6 @@ import { ListaContatosComponent } from './paginas/lista-contatos/lista-contatos.
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  title: string = 'Indexa';
 
 }
