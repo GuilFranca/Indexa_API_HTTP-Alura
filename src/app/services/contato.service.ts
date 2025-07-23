@@ -23,6 +23,7 @@ export class ContatoService {
   }
 
   salvarContato(contato: Contato) {
-    
+    // O método post é utilizado para a inserção de contatos
+    return this.http.post<Contato>(this.API, contato)
   }
 }

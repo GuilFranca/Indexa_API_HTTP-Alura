@@ -1,22 +1,31 @@
 {
-    "contatos": [
-        {
-            "nome": "Maria",
-            "telefone": "99 99999999",
-            "email": "maria@email.com",
-            "aniversario": "1995-06-01",
-            "redes": "",
-            "observacoes": "",
-            "id": 1
-        },
-        {
-            "nome": "João",
-            "telefone": "88 88888888",
-            "email": "joao@email.com",
-            "aniversario": "1990-01-06",
-            "redes": "",
-            "observacoes": "",
-            "id": 2
-        }
-    ]
+  "contatos": [
+    {
+      "nome": "Maria",
+      "telefone": "99 99999999",
+      "email": "maria@email.com",
+      "aniversario": "1995-06-01",
+      "redes": "",
+      "observacoes": "",
+      "id": 1
+    },
+    {
+      "nome": "João",
+      "telefone": "88 88888888",
+      "email": "joao@email.com",
+      "aniversario": "1990-01-06",
+      "redes": "",
+      "observacoes": "",
+      "id": 2
+    },
+    {
+      "nome": "Guilherme",
+      "telefone": "61 99651-8333",
+      "email": "guilfranca27@gmail.com",
+      "aniversario": "2004-05-27",
+      "redes": "www.linkedin.com/in/guilhermefrancafernandes",
+      "observacoes": "Estagiário Front-End Quality Digital!",
+      "id": 3
+    }
+  ]
 }

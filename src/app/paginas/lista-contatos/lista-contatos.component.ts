@@ -7,7 +7,6 @@ import { CabecalhoComponent } from '../../componentes/cabecalho/cabecalho.compon
 import { ContainerComponent } from '../../componentes/container/container.component';
 import { ContatoComponent } from '../../componentes/contato/contato.component';
 import { SeparadorComponent } from '../../componentes/separador/separador.component';
-import { FormularioContatoComponent } from '../formulario-contato/formulario-contato.component';
 import { ContatoService } from '../../services/contato.service';
 import { Contato } from '../../componentes/contato/contato';
 
@@ -21,7 +20,6 @@ import { Contato } from '../../componentes/contato/contato';
     SeparadorComponent,
     ContatoComponent,
     FormsModule,
-    FormularioContatoComponent,
     RouterLink
   ],
   templateUrl: './lista-contatos.component.html',
