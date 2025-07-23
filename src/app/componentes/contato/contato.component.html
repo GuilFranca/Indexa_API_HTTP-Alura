@@ -5,7 +5,7 @@
         </li>
         <li>{{ telefone }}</li>
         <li>
-            <button>
+            <button [routerLink]="['/formulario', id]">
                 <img src="/assets/pencil-square.png" alt="">
             </button>
             <!-- Como o router link vai ser criado dinâmicamente e não uma rota fixa, iremos utilizar os [] prober bind -->
