@@ -10,5 +10,9 @@
         </div>
     }
     <img [src]="bannerSrc" class="banner">
-    <h1 [innerText]="titulo" class="titulo"></h1>
+    <!-- O ngClass é uma diretiva de atributo que permite alterar as class da tag em questão -->
+    <h1 
+        [ngClass]="telaInicial ? 'titulo' : 'titulo-form' "
+        [innerHTML]="titulo">
+    </h1>
 </header>
