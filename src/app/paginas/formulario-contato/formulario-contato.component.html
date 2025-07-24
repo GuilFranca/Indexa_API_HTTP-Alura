@@ -45,11 +45,9 @@
       placeholder="Digite o nome do contato"
       formControlName="nome"
     />
-    @if (contatoForm.get('nome')?.errors && contatoForm.get('nome')?.touched) {
-      <div class="mensagem-erro">
-        Campo obrigatório
-      </div>
-    }
+    <!-- Component de mensagem de erro -->
+    <app-mensagem-erro [control]="obterControle('nome')"></app-mensagem-erro>
+
     <label for="telefone">Telefone</label>
     <input
       type="text"
@@ -57,11 +55,8 @@
       placeholder="Digite o telefone do contato"
       formControlName="telefone"
     />
-    @if (contatoForm.get('telefone')?.errors && contatoForm.get('telefone')?.touched) {
-      <div class="mensagem-erro">
-        Campo obrigatório
-      </div>
-    }
+  <app-mensagem-erro [control]="obterControle('telefone')"></app-mensagem-erro>
+
     <label for="email">E-mail</label>
     <input
       type="email"
@@ -69,17 +64,10 @@
       placeholder="Digite o e-mail do contato"
       formControlName="email"
     />
-    @if (contatoForm.get('email')?.errors?.['required'] && contatoForm.get('email')?.touched) {
-      <div class="mensagem-erro">
-        Campo obrigatório
-      </div>
-    }
-    @if (contatoForm.get('email')?.errors?.['email'] && contatoForm.get('email')?.touched) {
-      <div class="mensagem-erro">
-        Formato de e-mail inválido
-      </div>
-    }
+    <app-mensagem-erro [control]="obterControle('email')"></app-mensagem-erro>
+
     <app-separador></app-separador>
+
     <label for="aniversario">Aniversário</label>
     <input
       type="date"
@@ -87,6 +75,7 @@
       placeholder="Data de nascimento"
       formControlName="aniversario"
     />
+
     <label for="redes">Redes sociais</label>
     <div class="input-container">
       <span class="span-http">http://</span>
@@ -96,6 +85,7 @@
         placeholder="Adicione a URL da página"
         formControlName="redes"
       />
+
     </div>
     <label for="redes">Observações</label>
     <textarea
@@ -104,7 +94,9 @@
       placeholder="Coloque observações nesse espaço.  Exemplo: “Instrutora da academia “Nova Imagem”, amiga da Júlia”."
       formControlName="observacoes"
     ></textarea>
+
     <section class="botoes">
+
       <button (click)="cancelar()" class="botao-cancelar" type="button">Cancelar</button>
       <button
         [disabled]="contatoForm.invalid"
@@ -112,6 +104,9 @@
         type="submit">
         Salvar contato
       </button>
+
     </section>
+
   </form>
+
 </app-container>
