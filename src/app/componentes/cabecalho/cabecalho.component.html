@@ -1,5 +1,14 @@
 <header class="cabecalho">
     <img src="/assets/logo.png" class="logo">
-    <img src="/assets/banner.png" class="banner">
-    <h1 class="titulo">Organize, <span>conecte,</span> simplifique!</h1>
+    <!-- ! se não for a tela inicial -->
+    @if (!telaInicial) {
+        <div class="link">
+            <button routerLink="/lista-contatos">
+                <img class="seta" src="assets/arrow-left.png" alt="">
+                <a>Voltar</a>
+            </button>
+        </div>
+    }
+    <img [src]="bannerSrc" class="banner">
+    <h1 [innerText]="titulo" class="titulo"></h1>
 </header>
