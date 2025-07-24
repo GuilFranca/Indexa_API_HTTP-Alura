@@ -38,6 +38,7 @@ export class FormularioContatoComponent implements OnInit{
   inicializarFormulario() {
     this.contatoForm = new FormGroup({
       nome: new FormControl('', Validators.required),
+      avatar: new FormControl('', Validators.required),
       telefone: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
       aniversario: new FormControl(''),
@@ -71,4 +72,28 @@ export class FormularioContatoComponent implements OnInit{
     this.contatoForm.reset();
     this.router.navigateByUrl('/lista-contatos');
   }
+
+  aoSelecionarArquivo(event: any) {
+    // file receberá o conteúdo do evento inserido no método, retorna um objeto do tipo FileList que é uma lista de todos os arquivos inseridos pelo usuário
+    // event.target se refere ao próprio elemento HTML que disparou o evento
+    // Como será retonado um array de imgs precisamos selecionar a primeira, mesmo havendo só uma [0]
+    const file: File = event.target.files[0];
+    if(file) {
+      this.lerArquivo(file)
+    }
+  }
+
+  lerArquivo(file: File) {
+    // Instância fileReader
+    const reader = new FileReader();
+    reader.onload = () => {
+      if(reader.result) {
+        // ? navegação segura, se der tudo certo
+        this.contatoForm.get('avatar')?.setValue(reader.result)
+      }
+    }
+    // tranforma a img em uma string de base 64
+    reader.readAsDataURL(file)
+  }
+
 }
