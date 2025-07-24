@@ -31,6 +31,13 @@
         (change)="aoSelecionarArquivo($event)">
     </div>
 
+    @if(contatoForm.get('avatar')?.value !== '') {
+      <figure>
+        <!-- utilizaremos um binding de atributo [] para a inserção da imagem -->
+        <img [src]="contatoForm.get('avatar')?.value" alt="Avatar do contato">
+      </figure>
+    }
+
     <label for="nome">Nome</label>
     <input
       type="text"

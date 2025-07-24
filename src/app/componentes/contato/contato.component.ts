@@ -17,4 +17,5 @@ export class ContatoComponent {
   @Input() telefone: string = ''
   // Utilizaremos a interrogração pois o valor de id é opcional
   @Input() id?: number;
+  @Input() avatar: string | ArrayBuffer = '';
 }
