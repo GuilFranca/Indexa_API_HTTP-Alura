@@ -16,6 +16,20 @@
   </header>
   <app-separador></app-separador>
   <form [formGroup]="contatoForm" (ngSubmit)="salvarContato()" >
+
+    <!-- rule é uma propriedade que informa o papel da tag, nesse caso agindo como um botão -->
+    <div role="button" class="imagem-contato">
+      <i class="ri-add-fill"></i>
+      <label for="avatar">Adicione a imagem do contato</label>
+      <!-- type file permite que seja inserido um arquivo -->
+      <!-- accept determina que será aceito arquivos do tipo img e com o /* será possível aceitar qualquer formato de img -->
+      <input 
+        type="file"
+        accept="image/*"
+        id="avatar"
+        required>
+    </div>
+
     <label for="nome">Nome</label>
     <input
       type="text"
